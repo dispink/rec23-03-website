@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ReC23-03 — Japan Sea paleoceanography during the Miocene</title>
+<meta name="description" content="ReC23-03 — a J-DESC ReCoRD program re-investigating IODP and ODP legacy cores from the Sea of Japan to reconstruct Miocene paleoceanography and paleoclimate." />
+<script>
+/* Apply the saved language before first paint (same key as the prototype). */
+(function () {
+  var lang = "en";
+  try { if (localStorage.getItem("rec23.lang") === "jp") lang = "jp"; } catch (e) {}
+  var root = document.documentElement;
+  root.setAttribute("data-lang", lang);
+  root.setAttribute("lang", lang === "jp" ? "ja" : "en");
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Utility bar -->
+<div class="utility">
+  <div class="shell row">
+    <div class="left">
+      <span>ReC23-03</span>
+      <span class="dot-sep">·</span>
+      <span>ReCoRD Program</span>
+      <span class="dot-sep">·</span>
+      <span>2023 — 2026</span>
+    </div>
+    <div class="right">
+      <a class="en" href="https://j-desc.org/en/record/" target="_blank" rel="noopener">J-DESC ↗</a>
+      <a class="jp" href="https://j-desc.org/record/" target="_blank" rel="noopener">J-DESC ↗</a>
+      <span class="lang-toggle">
+        <button type="button" data-lang="en">EN</button>
+        <span class="sep">/</span>
+        <button type="button" data-lang="jp">JP</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Masthead -->
+<header class="masthead shell">
+  <div class="left"></div>
+  <div class="center">
+    <div class="wordmark">
+      <span class="code">ReC23-03</span><span class="en">Sea of Japan</span><span class="jp">日本海</span>
+    </div>
+    <div class="tagline">
+      <span class="en">Paleoceanography &amp; paleoclimatology during the Miocene</span>
+      <span class="jp">中新世の古海洋・古気候学</span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="kicker"><span class="en">Funded by</span><span class="jp">助成</span></div>
+    <div class="funder">
+      <a class="link en" href="https://j-desc.org/en/record/" target="_blank" rel="noopener">J-DESC · ReCoRD</a>
+      <a class="link jp" href="https://j-desc.org/record/" target="_blank" rel="noopener">J-DESC · ReCoRD</a>
+    </div>
+  </div>
+</header>
+
+<!-- Primary nav -->
+<nav class="nav">
+  <div class="shell row">
+    <div class="nav-links">
+      <a href="index.html" class="active"><span class="en">Home</span><span class="jp">ホーム</span></a>
+      <a href="members.html"><span class="en">Members</span><span class="jp">メンバー</span></a>
+      <a href="activities.html"><span class="en">Activities</span><span class="jp">活動</span></a>
+      <a href="publications.html"><span class="en">Publications</span><span class="jp">出版物</span></a>
+      <a href="presentations.html"><span class="en">Presentations</span><span class="jp">発表</span></a>
+      <a href="gallery.html"><span class="en">Gallery</span><span class="jp">ギャラリー</span></a>
+      <a href="others.html"><span class="en">Others</span><span class="jp">その他</span></a>
+    </div>
+    <div class="meta">ReC23-03</div>
+  </div>
+</nav>
+
+<main class="shell">
+
+  <!-- Hero (editorial variant) -->
+  <section class="hero">
+    <div class="grid">
+      <div>
+        <h1>
+          <span class="en">The Japan Sea paleoceanography and paleoclimatology during the Miocene</span>
+          <span class="jp">中新世における日本海の古気候・古海洋</span>
+        </h1>
+        <p class="lede">
+          <span class="en">A J-DESC ReCoRD program re-investigating IODP and ODP legacy cores from the Sea of Japan — reconstructing surface, intermediate and deep ocean conditions across the Miocene.</span>
+          <span class="jp">J-DESC ReCoRD プログラムの一課題として、IODP・ODP の日本海レガシーコアを再解析し、中新世の表層〜深層の海洋環境を復元する。</span>
+        </p>
+        <div class="tags">
+          <span class="tag accent"><span class="en">Active</span><span class="jp">進行中</span></span>
+          <span class="tag">2023 — 2026</span>
+          <span class="tag"><span class="en">26 members · 15 institutions</span><span class="jp">26名 · 15機関</span></span>
+        </div>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="assets/team-kashiwa-2026.jpg"
+               alt="Group photo of ReC23-03 members at the workshop, AORI Kashiwa Campus" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">ReC23-03 Workshop, AORI Kashiwa Campus</span>
+            <span class="jp">ReC23-03 ワークショップ（東京大学大気海洋研究所 柏キャンパス）</span>
+          </span>
+          <span class="numeral">2026-03-24</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="abstract">
+    <div class="grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span><span><span class="en">Project introduction</span><span class="jp">プロジェクト概要</span></span></div>
+        <h2>
+          <span class="en">Re-reading legacy cores from the Japan Sea</span>
+          <span class="jp">日本海のレガシーコアを読みなおす</span>
+        </h2>
+        <div class="filed">
+          <div class="kicker"><span class="en">Filed under</span><span class="jp">分類</span></div>
+          <div class="filed-terms">
+            <span class="en">Paleoceanography · Miocene · IODP/ODP</span>
+            <span class="jp">古海洋・中新世・IODP/ODP</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="body en dropcap">ReC23-03 is a project under the J-DESC Repository Core Re-analysis Program (ReCoRD) that re-investigates legacy IODP and ODP cores from the Japan Sea to reconstruct paleoceanographic and paleoclimatic conditions across the Miocene. Combining XRF core scanning, biostratigraphy (radiolarians, diatoms, foraminifera), tephra correlation, organic geochemistry, biomarker and isotope work, and machine-learning–assisted core image analysis, the team is building an integrated, high-resolution record of the Sea of Japan across the Miocene (~20–5 Ma).</p>
+        <p class="body jp">ReC23-03 は、J-DESC のリポジトリコア再解析プログラム（ReCoRD）の一課題として、IODP・ODP 等で取得された日本海のレガシーコアを再解析し、中新世の古海洋・古気候環境を復元するプロジェクトです。XRF コアスキャナーによる非破壊分析、放散虫・珪藻・有孔虫・テフラ等の層序、有機地球化学・バイオマーカー・同位体分析、そして機械学習を用いたコア画像解析を統合し、中新世（約20–5 Ma）の日本海の高解像度の総合記録を構築することを目指しています。</p>
+        <p class="more">
+          <a class="link arrow" href="activities.html"><span class="en">Read the project activity log</span><span class="jp">活動記録を見る</span></a>
+          <span class="dot-sep">·</span>
+          <a class="link arrow en" href="https://j-desc.org/en/record/" target="_blank" rel="noopener">ReCoRD program at J-DESC</a>
+          <a class="link arrow jp" href="https://j-desc.org/record/" target="_blank" rel="noopener">J-DESC の ReCoRD</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights">
+    <div class="grid">
+      <div class="cell">
+        <div class="idx numeral">01</div>
+        <div class="value">26</div>
+        <div class="label">Project members</div>
+        <div class="note">across 15 institutions</div>
+      </div>
+      <div class="cell">
+        <div class="idx numeral">02</div>
+        <div class="value">5</div>
+        <div class="label">Sites under re-analysis</div>
+        <div class="note">IODP Exp. 346 + ODP Legs 127/128</div>
+      </div>
+      <div class="cell">
+        <div class="idx numeral">03</div>
+        <div class="value">53</div>
+        <div class="label">Conference contributions</div>
+        <div class="note">FY2024 → FY2026</div>
+      </div>
+      <div class="cell">
+        <div class="idx numeral">04</div>
+        <div class="value">~20–5 Ma</div>
+        <div class="label">Time covered</div>
+        <div class="note">Miocene</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & updates -->
+  <section class="news">
+    <div class="section-head">
+      <h2><span class="en">News &amp; updates</span><span class="jp">ニュース・更新</span></h2>
+      <a class="link arrow" href="activities.html"><span class="en">All activities</span><span class="jp">すべての活動</span></a>
+    </div>
+    <ol>
+      <li>
+        <span class="date numeral">2026-03-23</span>
+        <span class="tag clay"><span class="en">Workshop</span><span class="jp">ワークショップ</span></span>
+        <a class="title" href="presentations.html">
+          <span class="en">Annual workshop held at AORI Kashiwa Campus — 25 contributions</span>
+          <span class="jp">東京大学大気海洋研究所（柏）にてワークショップ開催 — 25件の発表</span>
+        </a>
+        <a class="go" href="presentations.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+      <li>
+        <span class="date numeral">2026-03-08</span>
+        <span class="tag clay"><span class="en">Symposium</span><span class="jp">シンポジウム</span></span>
+        <a class="title" href="presentations.html">
+          <span class="en">ReC23-03 presented at Core-to-Core Symposium on IODP Legacy Cores</span>
+          <span class="jp">Core-to-Core シンポジウム「IODP Legacy Cores」にて ReC23-03 を紹介</span>
+        </a>
+        <a class="go" href="presentations.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+      <li>
+        <span class="date numeral">2025-11-30</span>
+        <span class="tag clay"><span class="en">Conference</span><span class="jp">学会</span></span>
+        <a class="title" href="presentations.html">
+          <span class="en">Four contributions at the Paleosciences Society 11th Annual Meeting</span>
+          <span class="jp">第11回地球環境史学会年会にて4件の発表</span>
+        </a>
+        <a class="go" href="presentations.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+      <li>
+        <span class="date numeral">2025-05-01</span>
+        <span class="tag clay"><span class="en">Newsletter</span><span class="jp">ニュース</span></span>
+        <a class="title" href="others.html">
+          <span class="en">ReCoRD ReC23-03 closing report featured in J-DESC Newsletter Vol. 18</span>
+          <span class="jp">J-DESC ニュースレター Vol. 18 にて ReC23-03 終了報告掲載</span>
+        </a>
+        <a class="go" href="others.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+      <li>
+        <span class="date numeral">2024-11-25</span>
+        <span class="tag clay"><span class="en">Activity</span><span class="jp">活動</span></span>
+        <a class="title" href="activities.html">
+          <span class="en">Shared sample division held at AORI</span>
+          <span class="jp">AORI にて共有試料分取を実施</span>
+        </a>
+        <a class="go" href="activities.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+      <li>
+        <span class="date numeral">2024-08-31</span>
+        <span class="tag clay"><span class="en">Press</span><span class="jp">メディア</span></span>
+        <a class="title" href="others.html">
+          <span class="en">Project covered in Yomiuri Shimbun (Kochi Core Center sampling party)</span>
+          <span class="jp">読売新聞にて高知コアセンターでのサンプリングパーティーが紹介される</span>
+        </a>
+        <a class="go" href="others.html" aria-hidden="true" tabindex="-1">→</a>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Gallery strip -->
+  <section class="gallery">
+    <div class="section-head">
+      <h2><span class="en">From the field &amp; lab</span><span class="jp">現場と実験室から</span></h2>
+      <a class="link arrow" href="gallery.html"><span class="en">All photos</span><span class="jp">ギャラリーへ</span></a>
+    </div>
+    <div class="grid">
+      <figure>
+        <div class="frame">
+          <img src="assets/team-kashiwa-2026.jpg" loading="lazy" decoding="async"
+               alt="Group photo of ReC23-03 members at the workshop, AORI Kashiwa Campus" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">ReC23-03 Workshop, AORI Kashiwa Campus</span>
+            <span class="jp">ReC23-03 ワークショップ（東京大学大気海洋研究所 柏キャンパス）</span>
+          </span>
+          <span class="numeral">2026-03-24</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame">
+          <img src="assets/sampling_party_1.jpg" loading="lazy" decoding="async"
+               alt="Sampling party at Kochi Core Center — pre-sampling briefing" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">Sampling party at Kochi Core Center — pre-sampling briefing</span>
+            <span class="jp">高知コアセンターでのサンプリングパーティー（事前打ち合わせ）</span>
+          </span>
+          <span class="numeral">2024</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame">
+          <img src="assets/sampling_party_2.jpg" loading="lazy" decoding="async"
+               alt="Sampling party at Kochi Core Center — core delivery" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">Sampling party at Kochi Core Center — core delivery</span>
+            <span class="jp">高知コアセンターでのサンプリングパーティー（コアの搬入）</span>
+          </span>
+          <span class="numeral">2024</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame">
+          <img src="assets/sampling_party_3.jpg" loading="lazy" decoding="async"
+               alt="Sampling party at Kochi Core Center — sub-sampling" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">Sampling party at Kochi Core Center — sub-sampling</span>
+            <span class="jp">高知コアセンターでのサンプリングパーティー（サブサンプリング）</span>
+          </span>
+          <span class="numeral">2024</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame">
+          <img src="assets/sampling_party_4.jpg" loading="lazy" decoding="async"
+               alt="Sampling party at Kochi Core Center — sub-sampling" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">Sampling party at Kochi Core Center — sub-sampling</span>
+            <span class="jp">高知コアセンターでのサンプリングパーティー（サブサンプリング）</span>
+          </span>
+          <span class="numeral">2024</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame">
+          <img src="assets/sampling_party_5.jpg" loading="lazy" decoding="async"
+               alt="Sampling party at Kochi Core Center — concurrently checking data" />
+        </div>
+        <figcaption>
+          <span class="cap">
+            <span class="en">Sampling party at Kochi Core Center — concurrently checking data</span>
+            <span class="jp">高知コアセンターでのサンプリングパーティー（並行してデータを確認）</span>
+          </span>
+          <span class="numeral">2024</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="shell">
+    <div class="row">
+      <div>
+        <h4><span class="en">About this site</span><span class="jp">このサイトについて</span></h4>
+        <p class="about">
+          <span class="en">Website of <b>ReC23-03</b> — a project under the J-DESC Repository Core Re-analysis Program (ReCoRD), advancing research on Japan Sea paleoceanography during the Miocene.</span>
+          <span class="jp"><b>ReC23-03</b> プロジェクトのwebサイトです。J-DESC リポジトリコア再解析プログラム（ReCoRD）の一課題として、中新世日本海の古海洋復元研究を進めています。</span>
+        </p>
+      </div>
+      <div>
+        <h4><span class="en">Sections</span><span class="jp">セクション</span></h4>
+        <ul>
+          <li><a href="index.html"><span class="en">Home</span><span class="jp">ホーム</span></a></li>
+          <li><a href="members.html"><span class="en">Members</span><span class="jp">メンバー</span></a></li>
+          <li><a href="activities.html"><span class="en">Activities</span><span class="jp">活動</span></a></li>
+          <li><a href="publications.html"><span class="en">Publications</span><span class="jp">出版物</span></a></li>
+          <li><a href="presentations.html"><span class="en">Presentations</span><span class="jp">発表</span></a></li>
+          <li><a href="gallery.html"><span class="en">Gallery</span><span class="jp">ギャラリー</span></a></li>
+          <li><a href="others.html"><span class="en">Others</span><span class="jp">その他</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="en">Program</span><span class="jp">プログラム</span></h4>
+        <ul>
+          <li><a href="https://j-desc.org/record/" target="_blank" rel="noopener">ReCoRD (JP)</a></li>
+          <li><a href="https://j-desc.org/en/record/" target="_blank" rel="noopener">ReCoRD (EN)</a></li>
+          <li><a href="https://j-desc.org/" target="_blank" rel="noopener">J-DESC</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="en">Contact</span><span class="jp">連絡先</span></h4>
+        <ul>
+          <li>Arisa Seki</li>
+          <li class="muted">Fukada Geological Institute</li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2023–2026 ReC23-03 Project</span>
+      <span>Set in Source Serif 4 &amp; Inter · Noto Sans JP</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* EN / JP toggle — persists via the same key the prototype used. */
+(function () {
+  var root = document.documentElement;
+  function setLang(lang) {
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang === "jp" ? "ja" : "en");
+    try { localStorage.setItem("rec23.lang", lang); } catch (e) {}
+  }
+  var buttons = document.querySelectorAll(".lang-toggle button");
+  for (var i = 0; i < buttons.length; i++) {
+    (function (btn) {
+      btn.addEventListener("click", function () {
+        setLang(btn.getAttribute("data-lang"));
+      });
+    })(buttons[i]);
+  }
+})();
+</script>
+
+</body>
+</html>
