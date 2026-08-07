@@ -23,6 +23,12 @@ Key remote files:
 
 ## Status
 
+- **Live** at https://dispink.github.io/rec23-03-website/ since 2026-08-07 (GitHub
+  Pages, legacy build from `main` root, repo public, HTTPS enforced). Pending: a
+  custom domain to get past university filters that block `*.github.io` (Kochi U.
+  does) — preferred route is asking J-DESC for `rec23-03.j-desc.org` → CNAME to
+  `dispink.github.io`; once granted, set the domain in Pages settings and add the
+  `CNAME` file.
 - All seven pages implemented and verified in Chrome (EN + JP, desktop + 390 px)
   2026-08-07. Home hero/highlights verified 2026-08-06.
 - The pending Seki content edits (remove Tagaya; Tojima → former; Aoyagi → current;

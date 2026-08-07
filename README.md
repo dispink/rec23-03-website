@@ -3,6 +3,11 @@
 Static website for **ReC23-03 — The Japan Sea paleoceanography and paleoclimatology
 during the Miocene** (J-DESC ReCoRD program, PI Arisa Seki).
 
+**Live site:** https://dispink.github.io/rec23-03-website/ (GitHub Pages, deployed
+from `main`; `.nojekyll` keeps it plain static). Note: `*.github.io` is blocked on
+some university networks (e.g. Kochi U.) — the planned fix is a custom domain
+(e.g. a J-DESC subdomain CNAME'd to `dispink.github.io`).
+
 Implemented from the Claude Design project **"ReC23-03 website"**
 (claude.ai/design/p/01988d24-923f-4c8b-8bd8-7baa15376bc8), which remains the design
 source of truth (layouts for the other pages, `data.js` content, tweak variants).
