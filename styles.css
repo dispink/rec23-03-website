@@ -348,6 +348,9 @@ html:not([data-lang="jp"]) .lang-toggle button[data-lang="en"],
 html[data-lang="jp"] .lang-toggle button[data-lang="jp"] {
   color: var(--ink); font-weight: 700;
 }
+/* JP can break between any two characters, so without this the nav links
+   flex-shrink into vertical stacks on narrow screens instead of scrolling. */
+.nav-links a { white-space: nowrap; }
 
 /* separators used between inline utility items */
 .dot-sep { margin: 0 10px; color: var(--ink-4); }
