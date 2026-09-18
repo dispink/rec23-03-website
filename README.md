@@ -22,7 +22,7 @@ All pages are implemented (compiled from the Design project prototypes):
   Aoyagi → current, Tagaya removed).
 - `activities.html` — major activities, recurring meetings, outreach cards.
 - `publications.html` — peer-reviewed placeholder box, news & coverage, funded grants.
-- `presentations.html` — all 53 contributions grouped by event, newest first.
+- `presentations.html` — all 57 contributions grouped by event, newest first.
 - `gallery.html` — photo grid with a click-to-zoom lightbox (vanilla JS).
 - `others.html` — related websites, grants, outreach, related news.
 
