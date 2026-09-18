@@ -24,21 +24,46 @@ canonical copy inside a design tool just adds a sync step that gets skipped. Ref
 `data.js` only when you are about to do *design* work and want the prototypes
 rendering against realistic data — not on every content change.
 
-**Content changes therefore go: gsheet → this repo's HTML.** Do not route them through
-the Design project. After any content change run the drift check:
+**Content changes therefore go: Seki's xlsx → gsheet → this repo's HTML.** Never route
+them through the Design project.
+
+### Runbook — new content arrives (a `Website content_YYYYMMDD.xlsx` from Seki)
+
+Follow these in order. Steps 1 and 2 are the ones that go wrong.
+
+**1. Merge the xlsx into the gsheet — merge, never replace.**
+Diff *both* directions first and treat gsheet-only rows as content to preserve, then
+hand-edit the deltas. The gsheet and Seki's dated snapshots are divergent branches;
+neither is a superset. *File → Import → Replace spreadsheet* looks like a clean
+one-step update and silently deletes whatever only the gsheet had — in 2026-08 that
+would have been two former students. Read/write mechanics and the full evidence are in
+the Claude memory notes `website-content-sheet-lineage` and `gsheet-edit-technique`
+(`~/.claude/projects/-Users-aslee-agents-rec23-03-website/memory/`).
+
+**2. Export the merged gsheet to xlsx.**
+Do not skip to step 3 using Seki's file. The moment step 1 lands, her xlsx is stale
+relative to the gsheet — checking against it re-blinds you to exactly the gsheet-only
+content step 1 just protected.
+
+**3. Update this repo's HTML, then check.**
 
 ```bash
-python3 tools/check_content.py            # newest Website content_*.xlsx on Drive
-python3 tools/check_content.py <file>     # or an explicit export
+python3 tools/check_content.py <fresh-export.xlsx>
+python3 tools/check_content.py                      # newest Website content_*.xlsx on Drive
 ```
 
-It reports sheet entries that never reached a page (exit 1 if any). It is
-one-directional and presence-only by design — it will not flag whitespace or
-bilingual-markup differences, which are noise. **Caveat:** it can only see what is in
-the export you give it, so content added straight to the gsheet needs a fresh export
-to be checked. See [[website-content-sheet-lineage]] — the gsheet and Seki's dated
-xlsx snapshots are divergent branches that each carry unique rows, so **never** update
-the sheet via *File → Import → Replace spreadsheet*.
+Reports sheet entries that never reached a page; exits 1 on drift. Also flags the
+reverse case — anyone in the sheet's `Deleted (not upload for website)` block who
+appears on a page.
+
+**4. Read the diff before committing.**
+The checker answers "did every sheet entry reach a page?" — nothing more. It is
+one-directional and presence-only on purpose (whitespace and bilingual-markup diffing
+buries real findings in noise), so it will not catch a mistyped affiliation, a person
+in the wrong section, or an EN string pasted into a JP span. Verify rendered pages in
+Chrome, both languages, desktop + 390 px.
+
+Note `main` is the deploy branch — pushing publishes to the live public site.
 
 ### Design project
 
@@ -72,8 +97,26 @@ ever do need to push a refresh. If auth fails, ask An-Sheng to run `/design-logi
   **Mori Sara** are gsheet-only former students that `data.js` never had, so they were
   missing from `members.html` — now added, former-members kicker 3 → 5. `data.js`
   itself is *not* updated for any of this, which is expected (see above).
-- Home news line says the 2026-03 workshop had **25** contributions (derived from
-  `data.js`; the design's original copy said 24).
+- **2026-09-17/18** — from Seki's two September mails and her
+  `Website content_20260917.xlsx`: **Watanabe Rikuto** (渡辺 陸斗, Kwansei Gakuin,
+  卒論生 under Kuwahara) added — active members 26 → 27, institutions still 15; the
+  4 September-2026 talks (JGS 133rd ×2, GSJ geochemistry 73rd ×2) added — contributions
+  53 → 57; 2 meetings (2026-05-27 JpGU, 2026-06-29 stratigraphy) added to
+  `activities.html`. Two errors in her file were corrected in the gsheet *and* the
+  page: rows 55–56 said "The 132nd Annual Meeting of the Geological Society of Japan"
+  where the JP cell and the date say the 133rd (2026 Kanazawa), and row 56's JP author
+  list lacked the separator before 多田隆治. The gsheet is therefore **ahead of her
+  20260917 file** by those two fixes plus Watanabe, Nomura, Mori and the 26K21423
+  grant — her next export must start from the gsheet. Watanabe is a 卒論生, so expect
+  a move to former members around 2027-03 (27 → 26, former kicker 5 → 6).
+- Home news line says the 2026-03 workshop had **25** contributions (derived from the
+  content data at build time; the design's original copy said 24). No news line was
+  added for the JpGU-AGU 2026 or the September 2026 meetings.
+- The gsheet is **link-readable without auth**, so a fresh export needs no browser:
+  `curl -sSL -o <file>.xlsx "https://docs.google.com/spreadsheets/d/<id>/export?format=xlsx"`.
+  Keep exports out of the Drive `website/` folder and away from the
+  `Website content_*.xlsx` name — that pattern is Seki's snapshots, and
+  `check_content.py` auto-picks the newest one.
 
 ## Conventions (follow these when implementing pages)
 
@@ -88,8 +131,11 @@ ever do need to push a refresh. If auth fails, ask An-Sheng to run `/design-logi
 - Shared chrome (utility bar, masthead, nav, footer) is currently duplicated per page —
   copy it from `index.html` and set the page's nav link to `class="active"`.
 - Numbers/dates use `.numeral`; keep the light theme default (`color-scheme: light`).
-- Data inconsistencies: prefer counts derivable from `data.js` (e.g. hero says
-  **15** institutions, not the design's stale 13).
+- Data inconsistencies: prefer counts derivable from **the content sheet** (e.g. hero
+  says **15** institutions, not the design's stale 13). Counts appear in the pages as
+  literals — the members page carries an active-members count and a former-members
+  kicker — so re-derive them whenever rows are added or moved between sections. The
+  drift checker does not verify counts.
 
 ## Assets
 
